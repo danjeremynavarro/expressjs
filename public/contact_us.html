@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  </head>
+<body>
+  <div id="before-background-image">
+  <div id="background-image">
+  </div>
+  <div id="after-background-image">   
+      <div id="nav-bar" class="page-content">  
+          <span class="menu-button-press">Contact</span>&nbsp; 
+          <span class="menu-button"><a class="menu" href="about.html">About</a></span>&nbsp; 
+          <span class="menu-button"><a class="menu" href="tech_page.html">Tech</a></span>&nbsp; 
+          <span class="menu-button"><a class="menu" href="science.html">Science</a></span>&nbsp; 
+      </div>
+      <div id="hide-button-container">
+        <button id="hide-menu-button" class="btn btn-dark btn-block">Menu</button>
+      </div>
+      <div id="content" class="container-fluid">    <div id="google_translate_element"></div>
+      <script type="text/javascript">
+          function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: "en" }, "google_translate_element");
+          }
+      </script>        
+        <form id="email-form">
+          <div class="form-group">
+            <label for="email-message">Email address</label>
+            <input type="text" class="form-control" id="email-address" name="userEmail" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We"ll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="email-message">Message</label>
+            <textarea class="form-control form-control-sm" id="email-message" name="emailMessage" placeholder="Message" rows="10"></textarea>
+          </div>
+          <div class="g-recaptcha" data-sitekey="6Lc-gfUUAAAAAPdax7kuJMtHlAWCAABNhFIB-6wS"></div>
+          <button type="button" id="submit-button" class="btn btn-primary">Submit</button>
+        </form>
+</div>
+</div>
+</div>
+<script src="/js/web_script.js"></script>
+<script src="/js/email.js"></script>   
+<script>
+$(document).ready(function () {
+  $("#submit-button").click(function (e) { 
+    e.preventDefault();
+    dannavarro.email.send_email("email-form");
+  });
+});
+</script>   
+</body>
+</html>

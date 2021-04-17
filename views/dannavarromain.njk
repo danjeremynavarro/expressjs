@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Main Page</title>
+<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.css">
+<link rel="stylesheet" type="text/css" href="/css/styles.css">
+</head>
+<body>
+<div id="before-background-image">
+<div id="background-image">
+</div>
+<div id="after-background-image">  
+    <div id="nav-bar"> 
+        <span class="menu-button"><a class="menu" href="contact_us.html">Contact us</a></span>&nbsp; 
+        <span class="menu-button"><a class="menu" href="about.html">About</a></span>&nbsp; 
+        <span class="menu-button-press"><a class="menu" href="tech_page.html">Tech</a></span>&nbsp; 
+        <span class="menu-button"><a class="menu" href="science.html">Science</a></span>&nbsp;  
+    </div>
+        <div id="content" class="container-fluid">
+        <!-- Put content here -->
+        {% block content %}
+        {% endblock %}
+        </div>
+
+</div>
+</div>         
+</body>
+</html>
